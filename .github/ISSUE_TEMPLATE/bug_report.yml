@@ -1,6 +1,6 @@
 name: Bug report
 description: Report a problem with the client
-labels: []
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
@@ -20,15 +20,14 @@ body:
     id: description
     attributes:
       label: Description
-      description: What happened, and what did you expect?
+      description: Describe the bug or the feature you are requesting, and the outcome you expect.
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
       label: How to reproduce
-    validations:
-      required: true
+      description: For bugs, how can we reproduce it?
   - type: textarea
     id: versions
     attributes:
