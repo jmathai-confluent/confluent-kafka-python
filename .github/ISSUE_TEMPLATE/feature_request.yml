@@ -1,0 +1,62 @@
+name: Feature request
+description: Request a feature or enhancement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > Issues for the current (`main`) client are automatically moved to our central tracker, `confluentinc/kafka-rust`. You will get a notification with the new link, and your original link will keep working. Issues for the legacy `2.x` client stay in this repository.
+  - type: dropdown
+    id: version-affected
+    attributes:
+      label: Which version does this affect?
+      options:
+        - main (current)
+        - 2.x (legacy)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the bug or the feature you are requesting, and the outcome you expect.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: For bugs, how can we reproduce it?
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: "Provide the confluent-kafka-python version (confluent_kafka.version()), the Rust core version (confluent_kafka.rust_version()), and the librdkafka version for 2.x (confluent_kafka.libversion())."
+    validations:
+      required: true
+  - type: input
+    id: broker-version
+    attributes:
+      label: Apache Kafka broker version
+  - type: textarea
+    id: config
+    attributes:
+      label: Client configuration
+      render: json
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+  - type: textarea
+    id: logs
+    attributes:
+      label: Client and broker logs
+      description: "Provide client logs (with 'debug': '..' as necessary) and broker log excerpts"
+      render: shell
+  - type: checkboxes
+    id: critical
+    attributes:
+      label: Severity
+      options:
+        - label: This is a critical issue
