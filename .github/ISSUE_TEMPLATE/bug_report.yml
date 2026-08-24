@@ -33,7 +33,7 @@ body:
     id: versions
     attributes:
       label: Versions
-      description: "Provide the confluent-kafka-python version (confluent_kafka.version()), the Rust core (kafka-rust) version, and the librdkafka version for 2.x (confluent_kafka.libversion())."
+      description: "Provide the confluent-kafka-python version (confluent_kafka.version()), the Rust core version (confluent_kafka.rust_version()), and the librdkafka version for 2.x (confluent_kafka.libversion())."
     validations:
       required: true
   - type: input
