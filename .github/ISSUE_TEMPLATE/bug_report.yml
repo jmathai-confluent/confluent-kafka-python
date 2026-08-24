@@ -29,11 +29,11 @@ body:
       label: How to reproduce
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: versions
     attributes:
-      label: confluent-kafka-python and librdkafka version
-      description: confluent_kafka.version() and confluent_kafka.libversion()
+      label: Versions
+      description: "Provide the confluent-kafka-python version (confluent_kafka.version()), the Rust core (kafka-rust) version, and the librdkafka version for 2.x (confluent_kafka.libversion())."
     validations:
       required: true
   - type: input
